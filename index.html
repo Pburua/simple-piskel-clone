@@ -3,110 +3,54 @@
   <head>
     <meta charset="UTF-8">
     <title>Simple Piskel Clone</title>
-    <link rel="stylesheet" href="dist/css/app.css">
+    <link rel="stylesheet" href="dist/css/landing.css">
   </head>
   <body>
+
     <header>
-      <div id="headtext">
+      <div class="headtext">
         <h1>Simple Piskel Clone</h1>
+      </div>
+      <div class="sign-in-block">
+        <a href="">Sign in</a>
       </div>
     </header>
     <main>
-
       <section class="column">
 
-        <div id="tools" class="window">
-
-          <div class="window__item window__item_selected hoverable" tool="pencil">
-            <div class="window__content">
-              P<b>e</b>ncil
-            </div>
+        <article class="screenshots">
+          <h2>An online editor for animated sprites & pixel art</h2>
+          <img src="dist/assets/screenshot.png" alt="app screenshot"/>
+          <div>
+            <a href="app.html">Create animation!</a>
           </div>
+        </article>
 
-          <div class="window__item hoverable" tool="fill-drip">
-            <div class="window__content">
-              Paint &nbsp;<b>b</b>ucket
-            </div>
+        <article class="samples">
+          <h2>Example sprite</h2>
+          <img src="dist/assets/example.gif" height="512" width="512" alt="example spite" filename="example"/></article>
+
+        <article class="overview">
+          <h2>App functionality</h2>
+          <div class="overview__row">
+            <div>Drawing <br>tools</div>
+            <div>Frames<br>management</div>
+            <div>Animated<br>preview</div>
+            <div>Export<br>to gif</div>
           </div>
-
-          <div class="window__item hoverable" tool="eraser">
-            <div class="window__content">
-              E<b>r</b>aser
-            </div>
-          </div>
-
-          <div class="window__item hoverable" tool="eye-dropper">
-            <div class="window__content">
-              E<b>y</b>e &nbsp;dropper
-            </div>
-          </div>
-
-        </div>
-
-        <div id="colors" class="window">
-
-          <div class="window__item hoverable" color="curr-color">
-            <label for="curr-color" class="window__content">
-              Color picker &nbsp;
-              <input id="curr-color" class="window__color" type="color" value="#e58719">
-            </label>
-          </div>
-
-        </div>
+        </article>
 
       </section>
-
-      <section class="column">
-        <ul class="frames">
-        </ul>
-      </section>
-
-      <section class="column">
-
-        <canvas id="canvas"></canvas>
-
-      </section>
-
-      <section class="column">
-
-        <div class="window">
-
-          <div id="animation-preview" class="window__item">
-            <div class="window__content"></div>
-            <div class="animation-speed">
-              <input class="animation-speed__range" type="range" min="0" max="24" step="1" value="0">
-              <span class="animation-speed__fps">0</span>
-              <span>fps</span>
-            </div>
-          </div>
-
-        </div>
-
-        <div id="dimension_switcher" class="window">
-
-          <div class="window__item hoverable disabled" dimension="DIMENSION_SMALL">
-            <div class="window__content">32x32</div>
-          </div>
-
-          <div class="window__item hoverable disabled" dimension="DIMENSION_MEDIUM">
-            <div class="window__content">64x64</div>
-          </div>
-
-          <div class="window__item hoverable disabled" dimension="DIMENSION_LARGE">
-            <div class="window__content">128x128</div>
-          </div>
-
-        </div>
-
-        <div id="export-window" class="window">
-          <div class="window__item hoverable">
-            <div id="export-btn" class="window__content">Export to&nbsp;<b>g</b>if</div>
-          </div>
-        </div>
-
-      </section>
-
     </main>
-    <script src="dist/js/app.js"></script>
+
+    <footer>
+      <div class="author">Pavel Burya</div>
+      <div class="link">
+        <a href="https://github.com/Pburua">Me on github</a>
+      </div>
+    </footer>
+
+    <script src="dist/js/landing.js"></script>
+
   </body>
 </html>

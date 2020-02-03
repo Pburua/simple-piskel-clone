@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Simple Piskel Clone</title>
+    <link rel="stylesheet" href="dist/css/app.css">
+  </head>
+  <body>
+    <header>
+      <div class="headtext">
+        <h1>Simple Piskel Clone</h1>
+      </div>
+      <div class="sign-in-block">
+        <a href="">Sign in</a>
+      </div>
+    </header>
+    <main>
+
+      <section class="column">
+
+        <div id="pen-unit" class="window">
+          <div class="window__item">
+            <div class="pen-width window__content">
+              <input class="pen-width__range" type="range" min="1" max="4" step="1" value="1">
+              <span class="pen-width__value">1</span>
+              <span>width</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="tools" class="window">
+
+          <div class="window__item window__item_selected hoverable toolkit" tool="pencil">
+            <div class="window__content">
+              Pencil
+            </div>
+          </div>
+
+          <div class="window__item hoverable toolkit" tool="fill-drip">
+            <div class="window__content">
+              Paint bucket
+            </div>
+          </div>
+
+          <div class="window__item hoverable toolkit" tool="eraser">
+            <div class="window__content">
+              Eraser
+            </div>
+          </div>
+
+          <div class="window__item hoverable toolkit" tool="eye-dropper">
+            <div class="window__content">
+              Eye &nbsp;dropper
+            </div>
+          </div>
+
+        </div>
+
+        <div id="colors" class="window">
+
+          <div class="window__item hoverable" color="primary-color">
+            <label for="primary-color" class="window__content">
+              Primary &nbsp;
+              <input id="primary-color" class="window__color" type="color">
+            </label>
+          </div>
+
+          <div class="window__item hoverable" color="secondary-color">
+            <label for="secondary-color" class="window__content">
+              Secondary &nbsp;
+              <input id="secondary-color" class="window__color" type="color">
+            </label>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="column">
+        <ul class="frames">
+        </ul>
+      </section>
+
+      <section class="column">
+
+        <canvas id="canvas"></canvas>
+
+      </section>
+
+      <section class="column">
+
+        <div class="window">
+
+          <div id="animation-preview" class="window__item">
+            <div class="window__content"></div>
+            <div class="animation-speed">
+              <input class="animation-speed__range" type="range" min="0" max="24" step="1" value="0">
+              <span class="animation-speed__fps">0</span>
+              <span>fps</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="dimension_switcher" class="window">
+
+          <div class="window__item hoverable" dimension="DIMENSION_SMALL">
+            <div class="window__content">32x32</div>
+          </div>
+
+          <div class="window__item hoverable" dimension="DIMENSION_MEDIUM">
+            <div class="window__content">64x64</div>
+          </div>
+
+          <div class="window__item hoverable" dimension="DIMENSION_LARGE">
+            <div class="window__content">128x128</div>
+          </div>
+
+        </div>
+
+        <div id="export-window" class="window">
+          <div class="window__item hoverable toolkit" tool="gif-exporter">
+            <div id="export-btn" class="window__content">Export to gif</div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+    <script src="dist/js/app.js"></script>
+  </body>
+</html>
